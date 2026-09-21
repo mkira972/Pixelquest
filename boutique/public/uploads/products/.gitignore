@@ -1,0 +1,4 @@
+# Le dossier doit exister dans Git, mais pas les images envoyees
+# depuis l'admin : elles sont propres a chaque installation.
+*
+!.gitignore

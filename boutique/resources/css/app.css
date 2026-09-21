@@ -1,0 +1,87 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* =========================================================
+   PixelQuest - feuille de style
+   =========================================================
+   Le mode sombre vient de Bootstrap lui-meme : j'ai mis
+   data-bs-theme="dark" sur la balise <html> dans mes gabarits.
+   Bootstrap s'occupe alors des tableaux, des menus, des champs
+   et des alertes. Je n'ecris ici que ce qui lui manque :
+   mes couleurs et mes vignettes de jeux.
+   ========================================================= */
+
+/* Mes deux couleurs, definies une seule fois */
+:root {
+    --violet: #8b5cf6;
+    --violet-fonce: #6d28d9;
+}
+
+/* Le fond du site, un peu plus sombre que celui de Bootstrap */
+body {
+    background-color: #0d0d13;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { flex: 1; }
+
+/* Le nom de la boutique dans la barre du haut */
+.pq-brand {
+    color: var(--violet);
+    font-weight: 800;
+}
+.pq-brand:hover { color: #a78bfa; }
+
+/* Les liens en violet plutot qu'en bleu */
+a { color: #a78bfa; }
+a:hover { color: #c4b5fd; }
+
+/* Le bouton principal du site */
+.btn-pq {
+    background-color: var(--violet);
+    border-color: var(--violet);
+    color: #fff;
+}
+.btn-pq:hover {
+    background-color: var(--violet-fonce);
+    border-color: var(--violet-fonce);
+    color: #fff;
+}
+
+.btn-outline-pq {
+    border: 1px solid var(--violet);
+    color: #a78bfa;
+}
+.btn-outline-pq:hover { background-color: var(--violet); color: #fff; }
+
+/* Les blocs : cartes, formulaires, encadres */
+.pq-panel {
+    background-color: #17171f;
+    border: 1px solid #2a2a3a;
+    border-radius: .5rem;
+}
+
+/* Une vignette de jeu */
+.pq-card {
+    background-color: #17171f;
+    border: 1px solid #2a2a3a;
+    border-radius: .5rem;
+    overflow: hidden;
+    height: 100%;
+}
+.pq-card:hover { border-color: var(--violet); }
+
+/* L'image du jeu, toujours au meme format */
+.pq-cover {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Le prix, bien visible */
+.pq-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+}
